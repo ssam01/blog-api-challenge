@@ -1,3 +1,4 @@
+const env = require('dotenv').config()
 const express = require('express');
 const morgan = require('morgan');
 
@@ -13,5 +14,5 @@ app.use(express.json());
 app.use('/blogPosts', blogPostsRouter);
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log(`Your app is listening on port ${process.env.PORT}||3000`);
+    console.log(`Your app is listening on port ${process.env.PORT||3000}`);
 });
